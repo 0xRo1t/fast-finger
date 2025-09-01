@@ -1,14 +1,13 @@
-## 
-1. 只用于扫描根url， 也就是  x.x.x.x/
-2. 如果扫描不是根url，不会有结果，因为注释掉了 根url的扫描
-main.go里面的
-//fmt.Printf("扫描原本的url %s\n", furl)
-//match_finger(furl)
+## 优势
+1. 利用了多线程,扫描速率快
+2. 爬取了目标站点的 子url （完整的url会爬取），接口不会爬取
+3. 优化了301 302 403等一些页面跳转无法扫到指纹的情况
 
-## 因为默认不处理 302 或者 301 跳转了
-所以指纹只需要写 跳转后的页面即可
 
+$env:GOOS="linux"
+$env:GOARCH="amd64"
+go build
 
 $env:GOOS="windows"
 $env:GOARCH="amd64"
-go build -o echo-pro.exe
+go build
