@@ -4,14 +4,6 @@
 3. 优化了301 302 403等一些页面跳转无法扫到指纹的情况
 
 ## 用法
-fast_finger_amd64 -u url
-fast_finger_amd64 -f 1.txt
-
-$env:GOOS="linux"
-$env:GOARCH="amd64"
-go build
-
-$env:GOOS="windows"
-$env:GOARCH="amd64"
-go build
+1. fast_finger_amd64 -u url
+2. fast_finger_amd64 -f 1.txt
 
